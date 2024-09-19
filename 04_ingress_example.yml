@@ -8,9 +8,9 @@ metadata:
     cert-manager.io/cluster-issuer: "letsencrypt-prod"
     acme.cert-manager.io/http01-edit-in-place: "true"
     nginx.ingress.kubernetes.io/from-to-www-redirect: "true"
-    kubernetes.io/ingress.class: nginx
     kubernetes.io/tls-acme: "true"
 spec:
+  ingressClassName: nginx
   tls:
     - hosts:
         - test.m324.hackerman.ch # Change this to your base url example: my-subdomain.m324.hackerman.ch
